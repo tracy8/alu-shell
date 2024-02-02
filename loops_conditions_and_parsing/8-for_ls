@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Use a for loop to iterate over non-hidden files in the current directory
+#for file in $(ls -p | grep -v / | grep -v '^\.' ); do
+for file in *; do
+# Check if the file is a regular file (not a directory) and not hidden
+    if [ -f "$file" ] && [[ ! "$file" =~ ^\. ]]; then
+        # Extract the part of the name after the first dash
+        name_part=$(echo "$file" | cut -d'-' -f2-)
+
+        # Display the result in a list format
+        echo "$name_part"
+    fi
+done
