@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Initialize a counter
+counter=1
+
+# Using a while loop to loop from 1 to 10
+while [ $counter -le 10 ]; do
+    if [ $counter -eq 4 ]; then
+        # Display "bad luck" for the 4th iteration
+        echo "bad luck"
+    elif [ $counter -eq 8 ]; then
+        # Display "good luck" for the 8th iteration
+        echo "good luck"
+    else
+        # Display "Best School" for other iterations
+        echo "Best School"
+    fi
+
+    ((counter++))
+done

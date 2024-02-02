@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Initialize a counter
+counter=0
+# Using a while loop to display "Best School" 10 times
+while [ $counter -lt 10 ]; do
+     if [ $counter -eq 8 ]; then
+        # Display "Best School" and then "Hi" on a new line for the 9th iteration
+        echo "Best School"
+        echo "Hi"
+    else
+        # Display "Best School" for other iterations
+        echo "Best School"
+    fi
+    ((counter++))
+done

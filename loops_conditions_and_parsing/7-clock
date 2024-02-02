@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Initialize variables
+hour=0
+minute=1
+
+# Using a while loop to display the time
+while [ $hour -le 12 ]; do
+    #printf "Hour: %2d\n" $hour 
+    echo "Hour: "$hour
+    while [ $minute -le 59 ]; do
+        # Display the current time
+        #printf "%2d\n" $minute
+        echo $minute
+        # Increment the minute
+        ((minute++))
+    done
+
+    # Reset minute for the next hour
+    minute=1
+
+    # Increment the hour
+    ((hour++))
+done
